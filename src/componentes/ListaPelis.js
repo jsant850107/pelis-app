@@ -3,9 +3,9 @@ import React from "react";
 const ListaPelis = (props) => {
     let i = 1;
     return(
-        <div className="container">
-         <table className='table table-hover table-responsive'>
-            <thead className="table-dark ">
+        // <div className="container mt-5 ">
+         <table border={1} className='table text-center table-hover'>
+            <thead className="table-dark">
                 <tr>
                     <th>Id</th>
                     <th>Nombre</th>
@@ -14,7 +14,7 @@ const ListaPelis = (props) => {
                     <th>Poster</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody className="bg-light">
                 {props.pelis.map((pelis, index) =>(
                     <tr key={pelis.imdbID}>
                         <th>{i++}</th>
@@ -30,7 +30,7 @@ const ListaPelis = (props) => {
                 
             </tbody>
         </table>
-        </div>
+        // </div>
     );
 }
 
